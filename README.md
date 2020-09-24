@@ -22,6 +22,8 @@ An example of how to run sqtl_cluster_viz can be found in `driver_key.sh`.
 sQTL_cluster_viz results in a pdf figure (located in the output directory) for each line in the sqtl_viz_input_file.
 
 
+## Requirements
+This script relies on some files (GTEx data) that is located on MARCC. And therefor cannot be run anywhere expcept on MARCC.
 
 
 ## Authors
