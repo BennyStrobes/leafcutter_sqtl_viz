@@ -17,7 +17,9 @@ The sqtl_viz_input_file is column-structured as follows:
 
 The sqtl_viz_input_file currently does not accept a header line.
 
-An example of how to run sqtl_cluster_viz can be found in `driver_key.sh`
+An example of how to run sqtl_cluster_viz can be found in `driver_key.sh`.
+
+This script results in a pdf figure (located in the output directory) for each line in the sqtl_viz_input_file.
 
 
 
