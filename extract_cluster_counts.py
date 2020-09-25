@@ -229,7 +229,6 @@ def save_jxns_to_output_file(geno_0_indis, geno_1_indis, geno_2_indis, jxn_names
 				geno_2_ordered_indis.append(val)
 	if len(geno_0_valid_rows) == 0 or len(geno_1_valid_rows) == 0 or len(geno_2_valid_rows) == 0:
 		print('assumption error!')
-		pdb.set_trace()
 	geno_0_filtered_matrix = jxn_matrix[geno_0_valid_rows, :]
 	geno_1_filtered_matrix = jxn_matrix[geno_1_valid_rows, :]
 	geno_2_filtered_matrix = jxn_matrix[geno_2_valid_rows, :]

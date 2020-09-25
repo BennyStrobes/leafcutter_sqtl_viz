@@ -172,6 +172,8 @@ exon_file <- args[3]  # File containing exon positions
 visualize_cluster_distribution_dir <- args[4] 
 
 
+tryCatch(
+{
 #visualize_cluster_distribution_dir <- "/Users/bennystrobes/Google Drive/Research/gtex_v8/rare_var/visualize/leaf_viz/visualize_cluster_distribution/"
 
 #clusters_to_plot_file <- paste0(visualize_cluster_distribution_dir, clusters_to_plot_file)
@@ -196,7 +198,7 @@ num_clusters <- dim(clusters_to_plot)[1]
 
 if (num_clusters != 0) {
 for (cluster_num in 1:num_clusters) {
-	cluster_id <- as.character(clusters_to_plot[cluster_num,1])
+  cluster_id <- as.character(clusters_to_plot[cluster_num,1])
   ensamble_id <- as.character(clusters_to_plot[cluster_num,2])
   chrom_num <- as.character(clusters_to_plot[cluster_num,3])
 	var_pos <- as.numeric(clusters_to_plot[cluster_num,4])
@@ -225,3 +227,8 @@ for (cluster_num in 1:num_clusters) {
 }
 }
 
+},
+error = function(e){
+  print("error")
+}
+)
